@@ -21,7 +21,9 @@ namespace Bind_Anywhere
 
             EquipmentSlot.Backpack,
             EquipmentSlot.SecuredContainer,
-            EquipmentSlot.ArmBand
+            EquipmentSlot.ArmBand,
+            EquipmentSlot.TacticalVest,
+            EquipmentSlot.Pockets
 
             };
 
