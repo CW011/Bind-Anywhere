@@ -1,0 +1,6 @@
+D:\SPT Test\Development\Bind Anywhere\bin\Debug\Bind Anywhere.dll
+D:\SPT Test\Development\Bind Anywhere\bin\Debug\Bind Anywhere.pdb
+D:\SPT Test\Development\Bind Anywhere\obj\Debug\Bind Anywhere.csproj.AssemblyReference.cache
+D:\SPT Test\Development\Bind Anywhere\obj\Debug\Bind Anywhere.csproj.CoreCompileInputs.cache
+D:\SPT Test\Development\Bind Anywhere\obj\Debug\Bind Anywhere.dll
+D:\SPT Test\Development\Bind Anywhere\obj\Debug\Bind Anywhere.pdb
