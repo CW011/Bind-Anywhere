@@ -1,21 +1,37 @@
 ﻿using BepInEx;
 using BepInEx.Logging;
-using Spt.Reflection;
+using UnityEngine;
+using EFT.InventoryLogic;
+using EFT;
+using SPT.Reflection;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using HarmonyLib;
 
 namespace Bind_Anywhere
 {
-    [BepInPlugin("com.bepinex.plugins.bindanywhere", "Bind Anywhere", "1.0.0.0")]
+
+    [BepInPlugin("com.bepinex.plugins.bindanywhere", "BindAnywhere", "1.0.0.0")]
     public class Plugin : BaseUnityPlugin
     {
-        private void Awake()
+        private static EquipmentSlot[] _extendedFastAccessSlots = {
+
+            EquipmentSlot.Backpack,
+            EquipmentSlot.SecuredContainer,
+            EquipmentSlot.ArmBand
+
+            };
+
+        internal void Awake()
         {
-            // Plugin test
-            Logger.LogInfo($"Plugin {PluginInfo.PLUGIN_GUID} is loaded! Hi!")
+            DontDestroyOnLoad(this);
+
+            var fastAccessSlots = AccessTools.Field(typeof(Inventory), "FastAccessSlots");
+            fastAccessSlots.SetValue(fastAccessSlots, _extendedFastAccessSlots);
+
         }
     }
 }
