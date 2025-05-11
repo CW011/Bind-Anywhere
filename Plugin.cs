@@ -10,6 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using HarmonyLib;
+using static Bind_Anywhere.Bind_Anywhere;
 
 namespace Bind_Anywhere
 {
@@ -34,6 +35,9 @@ namespace Bind_Anywhere
             var fastAccessSlots = AccessTools.Field(typeof(Inventory), "FastAccessSlots");
             fastAccessSlots.SetValue(fastAccessSlots, _extendedFastAccessSlots);
 
+
+            new IsAtBindablePlace().Enable();
+            new IsAtReachablePlace().Enable();
         }
     }
 }
